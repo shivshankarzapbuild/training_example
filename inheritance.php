@@ -15,7 +15,7 @@
         echo "name is {$this->name} and batch is {$this->batch}";
     }
  } 
- //Derived class
+ //Derived class extending base 
 class Derived extends Base{
 
     // Derived class function
