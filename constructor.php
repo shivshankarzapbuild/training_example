@@ -10,7 +10,7 @@
          {
              $this->name=$name;
              $this->batch = $batch;
-
+        
          }
          //returning the name value
          function getName()
