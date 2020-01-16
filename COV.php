@@ -16,6 +16,7 @@
             return $this->name;
             //return $this->batch;    
           }
+        //returning batch name 
           public function getBatch()
            {
                return $this->batch;
