@@ -1,5 +1,5 @@
 <?php 
-//declaring traits
+// declaring traits
     trait test1{
         public function myFun(){
             echo "Trait 1";
