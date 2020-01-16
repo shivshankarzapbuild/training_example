@@ -5,13 +5,14 @@
        //private variable
        private $name;
        private $batch;
-    // COnsttructor
+    // Consttructor
         function __construct($name, $batch)
          {
              $this->name=$name;
              $this->batch = $batch;
 
          }
+         //returning the name value
          function getName()
          {
              return $this->name;
