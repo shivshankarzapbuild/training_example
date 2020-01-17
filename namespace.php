@@ -25,23 +25,25 @@
     }
     //Second Namespace having same function and class as of the first
     namespace myNameSpace1{
-
+        //same function name as of first namespace
          function myFunc(){
           echo "<br> Name space 1 function";  
         } 
         myFunc();
-
+        //same class as of first namespace 
         class Myclass {
             private $name;
-
+            //constructor
             public function __construct($name){
                 $this->name = $name;
             }
+            //showing the data
             public function setName(){
                 echo " name is $this->name";
             }
         
-        }
+        }   
+        //object made and constructor called
         $mycls = new Myclass("Ankit");
         echo $mycls->setName();
 
