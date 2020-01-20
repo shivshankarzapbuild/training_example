@@ -1,7 +1,6 @@
 <?php
 
-
-// autoload function i called when we try to make the of of the class which does
+// autoload function i called when we try to make the class which does
 // not exist in the file and load the file having the class name same as the filename 
 function __autoload($className){
 
@@ -12,6 +11,8 @@ function __autoload($className){
         // private variable declaration
         private $name;
         private $batch;
+
+        //static variable for counter
         static $counter = 0;
 
         //constructor defining
@@ -27,6 +28,7 @@ function __autoload($className){
             $this->batch = $batch1;
 
         } */
+
         // function to show name 
         public function getName(){
             echo "<br>The name is $this->name and batch is $this->batch";
@@ -155,14 +157,16 @@ function __autoload($className){
     echo "<br>";
     echo "__clone function";
     echo "<br>";
+
     //showing  the number of copies of function cloned and made new
-    
+
     echo MyClass::$counter; 
 
     //calling to autoload function because of making of undefined classes of the 
     // file i.e. classes ABC,DEF,GHI  does not exist in the file 
 
     $abc = new ABC();
+    $abc->show();
     $def = new DEF();
     $ghi = new GHI();
 
