@@ -91,8 +91,14 @@ if(isset($save))
 		
 	</head>
 	<body>
+        <script> 
+        $("form").submit(function(e) {
+            e.preventDefault();
+ 
+        });
+        </script>
         <!-- form for getting the numbers and showing the result -->
-		<form method="post">
+		<form method="post" id="form">
 		<table border="1" align="center">
 			<tr>
 				<th>Result</th>
