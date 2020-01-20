@@ -1,8 +1,31 @@
 <?php
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-echo phpinfo();
+class Connection
+{
+    protected $link;
+    private $dsn, $username, $password;
+    
+    public function __construct($dsn, $username, $password)
+    {
+        $this->dsn = $dsn;
+        $this->username = $username;
+        $this->password = $password;
+        $this->connect();
+    }
+    
+    private function connect()
+    {
+        $this->link = new PDO($this->dsn, $this->username, $this->password);
+    }
+    
+    public function __sleep()
+    {
+        return array('dsn', 'username', 'password');
+    }
+    
+    public function __wakeup()
+    {
+        $this->connect();
+    }
+}
+    $fn = new Connection();
 ?>
