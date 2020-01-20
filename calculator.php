@@ -107,11 +107,11 @@ if(isset($save))
 			
 			<tr>
 				<th>Enter your First num</th>
-				<th><input type="number" name="fn" value="<?php  echo @$fn;?>"/></th>
+				<th><input type="number" name="fn" value="<?php  echo $fn;?>"/></th>
 			</tr> 
 			<tr>
 				<th>Enter your Second num</th>
-				<th><input type="number" name="sn" value="<?php  echo @$sn;?>"/></th>
+				<th><input type="number" name="sn" value="<?php  echo $sn;?>"/></th>
 			</tr>
 			<tr>
 				<th>Select Your Choice</th>
