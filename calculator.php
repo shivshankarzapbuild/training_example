@@ -35,17 +35,15 @@ public function divide(){
         return "Divide by zero Error";
     }
     else{
-    return $this->firstNumber/$this->secondNumber;
+    return ($this->firstNumber/$this->secondNumber);
     }
 }
 
 //to find the square root of the numbers
-public function squareRoot(){
+    public function squareRoot(){
+        return sqrt($this->firstNumber);
 
-    
-    return sqrt($this->firstNumber);
-
-}
+    }
 }
 
 //when the submit button is clicked or for the post method 
