@@ -1,14 +1,24 @@
 <?php
+
+
+// autoload function i called when we try to make the of of the class which does
+// not exist in the file and load the file having the class name same as the filename 
+function __autoload($className){
+
+    include_once "./classes/$className.php";
+}
     // class declaration
     class MyClass{
         // private variable declaration
         private $name;
         private $batch;
+        static $counter = 0;
 
         //constructor defining
         public function __construct($name , $batch){
             $this->name = $name;
             $this->batch = $batch;
+            self::$counter++;
 
         }
 
@@ -38,14 +48,120 @@
             echo "<br>Trying to set $arg1 and failed and the value was $arg2";
 
         }
+        //isset is called when unset property is called
+        public function __isset($name) {
+
+            echo "<br>called to unset property $name";
+        }
+        //unset is called when an inaccicible property or unavailable property is trying to be unset
+        public function __unset($name){
+
+            echo "<br> Trying to unset the unavailable or inaccessible property $name ";
+        }
+
+        //sleep method called when serialize the data
+
+     public function __sleep(){
+
+        $this->batch = 2021;
+            return ['batch'];
+        }
+
+        //wake up method 
+        public function __wakeup(){
+            
+            echo "<br>I am waking up";
+            
+        }
+        //this method is called when we try to print the object of the class 
+        public function __toString(){
+            return "<br> Name is $this->name and batch is $this->batch";
+        }
+        
+        //this method is called when we try to call our object as method
+        public function __invoke(){
+            
+            echo "trying to call object as method "; 
+
+        }
+        //calling the clone function to see how many object has been cloned
+        //using clone method
+        public function __clone(){
+            self::$counter++;
+
+        }
 
     }
 
     // Object created and constructor called
     $mycls = new MyClass("Shiv Shankar ",2020);
-    $mycls->setName("Pulok ",2020); // __call function called if setName does not exist
+    
+    // __call function called if setName does not exist
+    $mycls->setName("Pulok ",2020); 
+    
+    
+    echo "<br>";
+
     $mycls->getName();
-    echo $mycls->firstName;//__get function called
-    $mycls->firstName = "Shiv";//__set function called
+
+    //__get function called
+    echo "<br>";
+    echo $mycls->firstName;
+
+    //__set function called
+
+    echo "<br>";
+    $mycls->firstName = "Shiv";
+
+    //__isset function called because calling to unset variable
+    
+    echo "<br>";
+    isset($mycls->name);
+
+   // __unset function called because unsetting the unset variable
+   
+   echo "<br>";
+   unset($mycls->name);
+
+    //serialize the data 
+
+    echo "<br>";
+    $serial =  serialize($mycls);
+    echo "<br>";
+    echo $serial;
+
+    //unserialize the object 
+    
+    
+    echo "<br><br>";
+    $unSerial = unserialize($serial);
+    echo "<br>";
+    var_dump($unSerial);
+
+    //calling __to string 
+    echo "<br>";
+    echo $mycls;
+    echo "<br>";
+
+    //calling __invoke
+    echo "<br>";
+    echo $mycls();
+
+    // Calling to the __clone method 
+
+    $myclass = clone $mycls;
+    echo "<br>";
+    echo "<br>";
+    echo MyClass::$counter; 
+
+    //calling to autoload function 
+
+    $abc = new ABC();
+
+    $def = new DEF();
+    $ghi = new GHI();
+
+
+    echo "<br>";
 
 ?>
