@@ -35,28 +35,28 @@ function __autoload($className){
         //call magic function happens when the function in the argument does not exist
         public function __call($function,$argument){
 
-            echo "<br>Tried to call $function() with $argument and failed";
+            echo "<br>Tried to call $function() with $argument and failed  __call function";
         }
          //get is called when an undefined variable is being called
         public function __get($arg){
             
-            echo "<br>Tried to get $arg variable value and failed";
+            echo "<br>Tried to get $arg variable value and failed __get function";
 
         }
         // set is called when we try to set value of variable which does not exist
         public function __set($arg1,$arg2){
-            echo "<br>Trying to set $arg1 and failed and the value was $arg2";
+            echo "<br>Trying to set $arg1 and failed and the value was $arg2 __set function ";
 
         }
         //isset is called when unset property is called
         public function __isset($name) {
 
-            echo "<br>called to unset property $name";
+            echo "<br>called to unset property $name __isset function";
         }
         //unset is called when an inaccicible property or unavailable property is trying to be unset
         public function __unset($name){
 
-            echo "<br> Trying to unset the unavailable or inaccessible property $name ";
+            echo "<br> Trying to unset the unavailable or inaccessible property $name __unset function";
         }
 
         //sleep method called when serialize the data
@@ -64,30 +64,32 @@ function __autoload($className){
      public function __sleep(){
 
         $this->batch = 2021;
+        echo "__sleep function";
             return ['batch'];
         }
 
         //wake up method 
         public function __wakeup(){
             
-            echo "<br>I am waking up";
+            echo "<br>I am waking up  __wakeup function";
             
         }
         //this method is called when we try to print the object of the class 
         public function __toString(){
-            return "<br> Name is $this->name and batch is $this->batch";
+            return "<br> Name is $this->name and batch is $this->batch __toString Function";
         }
         
         //this method is called when we try to call our object as method
         public function __invoke(){
             
-            echo "trying to call object as method "; 
+            echo "trying to call object as method __invoke method "; 
 
         }
         //calling the clone function to see how many object has been cloned
         //using clone method
         public function __clone(){
             self::$counter++;
+            
 
         }
 
@@ -126,7 +128,7 @@ function __autoload($className){
     //serialize the data 
 
     echo "<br>";
-    $serial =  serialize($mycls);
+    $serial = serialize($mycls);
     echo "<br>";
     echo $serial;
 
@@ -151,13 +153,16 @@ function __autoload($className){
 
     $myclass = clone $mycls;
     echo "<br>";
+    echo "__clone function";
     echo "<br>";
+    //showing  the number of copies of function cloned and made new
+    
     echo MyClass::$counter; 
 
-    //calling to autoload function 
+    //calling to autoload function because of making of undefined classes of the 
+    // file i.e. classes ABC,DEF,GHI  does not exist in the file 
 
     $abc = new ABC();
-
     $def = new DEF();
     $ghi = new GHI();
 
