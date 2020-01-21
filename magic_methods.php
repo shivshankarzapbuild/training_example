@@ -1,6 +1,6 @@
 <?php
 
-// autoload function i called when we try to make the class which does
+// autoload function is called when we try to make the class which does
 // not exist in the file and load the file having the class name same as the filename 
 function __autoload($className){
 
