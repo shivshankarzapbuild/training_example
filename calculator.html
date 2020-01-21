@@ -1,0 +1,44 @@
+<!DOCTYP html>
+<!-- FOr the GUI part of the page -->
+<html>
+	<head>
+		<title>Calculator</title>
+		
+	</head>
+	<body>
+        <!-- form for getting the numbers and showing the result -->
+		<form method="post" id="form" action="calculator_logic.php">
+		<table border="1" align="center">
+			<tr>
+				<th>Enter your First Number</th>
+				<th><input type="number" name="firstNumber" value="<?php  echo $firstNumber;?>"/></th>
+			</tr> 
+			<tr>
+				<th>Enter your Second Number</th>
+				<th><input type="number" name="secondNumber" value="<?php  echo $secondNumber;?>"/></th>
+			</tr>
+			<tr>
+				<th>Select Your Choice</th>
+				<th>
+
+                <!-- for the selection of the operator -->
+				<select id="choice" name="choice">
+
+					<option>ADD</option>
+					<option>SUBTRACT</option>
+                    <option>MULTIPLY</option>
+                    <option>DIVIDE</option>
+                    <option>SQUARE_ROOT</option>
+				</select>
+				</th>
+			</tr>
+			<tr>
+				
+				<th colspan="2">
+				<input type="submit" name="submit" value="Show Result"/>
+				</th>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>
