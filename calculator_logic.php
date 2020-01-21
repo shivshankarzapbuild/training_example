@@ -4,7 +4,7 @@ function __autoload($className){
     include_once "$className.php";
 }
 
-//$var = "<span>&#8730</span>";
+//$var = "<span>&#8730</span>"
 
 //when the submit button is clicked or for the post method 
 if(isset($_POST['submit']))   
