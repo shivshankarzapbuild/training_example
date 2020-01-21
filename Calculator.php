@@ -2,7 +2,7 @@
 
 class Calculator{
 
-    //First number and the second number
+    //First number and the  second number
     private $firstNumber;
     private $secondNumber;
 
