@@ -6,13 +6,11 @@ chr()
 chunk_split()
 echo()
 explode()
-
 hex2bin()	
 html_entity_decode()
 htmlentities()
 htmlspecialchars_decode()
 htmlspecialchars()
-
 implode()	
 join()
 lcfirst()
