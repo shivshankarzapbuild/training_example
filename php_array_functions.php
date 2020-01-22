@@ -62,6 +62,14 @@
   $array = array("A","A","B","V","C","V");
   print_r(array_count_values($array));
 
-  //
+  //array_diff prints the difference of the two array only the difference element
+  //compares only the values of the array
+
+  $array1 = array("A","B","C","D");
+  $array2 = array("A","B","C");
+  echo "<br>";
+  print_r(array_diff($array1,$array2));
+
+  //array 
 
 ?>
