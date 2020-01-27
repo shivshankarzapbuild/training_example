@@ -1,0 +1,15 @@
+ALGORITHM
+
+STEPS
+
+Step 1: START.
+
+Step 2: Repeat step from 3 to 5 untill 2pow(n)  - 1
+
+Step 3: Move disk from source to middle tower
+
+Step 4: Move disk from source to destination.
+
+Step 5: Move disk from middle to destination.
+
+Step 6: Exit.

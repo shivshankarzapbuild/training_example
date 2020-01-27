@@ -1,0 +1,21 @@
+ALGORITHM
+
+STEPS
+
+Step 1: Start.
+
+Step 2: Input the number whose digit sum is to be calculated in NUMBER 
+        and initialize a variable SUM=0.
+
+Step 3: Repeat step 4 and Step 5 untill the NUMBER is greater than 10.
+
+Step 4: Find the remainder of the NUMBER and add it to the SUM i.e. SUM = SUM + NUMBER.
+
+Step 5: Now divide the NUMBER by 10 and store it in the NUMBER itself.  
+
+Step 6: Now at last add the NUMBER to the SUM.
+
+Step 7: The value of SUM is the required Sum of digits.
+
+Step 8: Exit.
+
