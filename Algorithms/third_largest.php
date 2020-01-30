@@ -1,8 +1,9 @@
 <?php
 
-    $value = array(8,57,6742,65,5,8,2262,56);
+    //  program to find out the third largest in the unsorted array 
+    $value = array(898,57,674,659,875,8,262,56);
     $first = $value[0];
-    echo $first;
+    // echo $first;
     $second = 0;
     $third = 0;
     for($i=0;$i<8;$i++){
