@@ -9,6 +9,7 @@
     $length = count($arr);
     
     $count = 0;
+    
     for($i =0;$i <$length;$i++){
         $temp = $arr[$i];
         $count = 1;
