@@ -18,6 +18,7 @@
              return $this->name;
 
          }
+         
          function getBatch()
          {
              return $this->batch;
