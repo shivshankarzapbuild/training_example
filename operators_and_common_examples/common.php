@@ -63,15 +63,15 @@
         }
         //Function for using the do while function just for example
         public function dowhile(){
-            $first = $this->Number1;
-            
-            do{
-                echo "<br> $this->Number1";
-                $this->Number1++;
-            }while($this->Number1<$this->Number2);
+                $first = $this->Number1;
+                
+                do{
+                    echo "<br> $this->Number1";
+                    $this->Number1++;
+                }while($this->Number1<$this->Number2);
         }
         
-        //
+        //While loop implemented inside the function in the class 
         public function whileFunction(){
 
             while($first<=$this->Number2){
@@ -79,15 +79,18 @@
                 $first++;
             }
         }
+
+
     }
 
-    //Numbers passed into the constructor 
-    $num = new Numbers(15,24);
+        //Numbers passed into the constructor 
+        $num = new Numbers(15,24);
 
-    //Methods called
-    $num->comparision();
-    $num->greater();
-    $num->dowhile();
-    $num->whileFunction();
+        //Methods called
+        $num->comparision();
+        $num->greater();
+        $num->dowhile();
+        $num->whileFunction();
+
 
 ?>
