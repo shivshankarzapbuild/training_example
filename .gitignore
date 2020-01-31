@@ -1,6 +1,6 @@
 
 
 #ignoring the files below
-./Algorithms/a.out
+Algorithms/a.out
 ./a.out
 *.log
