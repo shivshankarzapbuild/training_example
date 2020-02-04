@@ -18,9 +18,7 @@
         $id= $_POST["id"];
         $name= $_POST["name"];
         $email = $_POST["email"];
-        $password = $_POST["password"];
-
-
+        $password = sha1($_POST['password']);
        // echo "$id  $name  $email  $password";
 
         $sql = "INSERT INTO test_table(id,username,email,password) VALUES ($id,'$name','$email','$password')";
