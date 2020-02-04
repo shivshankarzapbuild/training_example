@@ -5,7 +5,7 @@
     //checkdate method is used for the validation of the date that if the date is a valid 
     //date or not
 
-    var_dump(checkdate(12,24,2020));//returns true if the date exist amd false if the date is
+    var_dump(checkdate(12,24,2020));//returns true if the date exist and false if the date is
                                     // not valid
 
     //date_create creates a date and we can show it using date_format Y-M-D
@@ -24,10 +24,8 @@
 
     echo date_format($date,"y/m/d");
 
+    ///More of the function is going to be added 
     
-
-
-
 
 
 
