@@ -1,0 +1,52 @@
+PROJECT DESCRIPTION
+* When we are in college then we are not able to talk to our super seniors and we end up 
+  taking some bad decisions and does not study what is required for the industrial survival
+  or to get a good job in the respective department.
+
+* So I thought of creating a webApp or Website which we can use to connect to all Alumni.
+
+* The First module will be for registration and authentication that will be required by each
+  student for entering into the Website.
+
+* This project consist of some modules 
+    * NEWS FEED
+    * CURRENT STUDENTS
+    * PASSED OUT STUDENTS
+    * CHAT
+    * QA FORUM
+    * HELPDESK
+    * WE CAN ADD A CHATBOT FOR THE SUPPORT OF THE WEBSITE OR THE webApp
+
+    * NEWS FEED 
+        * Anyone can post only the technology related post or any job related post which may 
+          helpful for the student in the college
+        * the post may be about also the QA which  are required or can enhance the skills of
+          the STUDENTS
+
+    *CURRENT STUDENTS (WITH DIFFERENT DEPARTMENTS)
+        *CURRENT YEAR i.e (The student which are currently studying in the college)
+         It should be updated each YEAR
+    
+    * PASSED OUT STUDENTS 
+        *PASSING YEAR (WITH DIFFERENT DEPARTMENTS) 
+        
+        (a list of all passing year and having all the list of student which
+          have passed that year )
+
+          A page for each student having all the details also a message part 
+
+    * CHAT 
+        * This consist of the two parts
+        * GROUP CHAT( may be year wise)
+        * PERSONAL CHAT(doesnot concern about the year )
+
+    *QA FORUM
+        * This consist of only the question and answers which can be posted by any of the
+          student and cand be viewed and answered by any of the student of any of the year
+
+    *HELPDESK
+        *This will concern about the problems with the website if they are not able to sign 
+        in or register on the webpage so the can email us for the support.
+
+    * LOGOUT
+        this will simply logout the user from the webpage and redirect it to the login page.
