@@ -1,6 +1,6 @@
 <?php
 
-    $number = 570;
+    $number = 92;
     $k=0;
     $arr = array();
     

@@ -8,6 +8,7 @@
     $host = "localhost";
 
     $conn = mysqli_connect($host,$username,$pass,$db);
+    echo $_SERVER["QUERY_STRING"];
 	//$conn2 = mysqli_connect($host,$user,$password,$db2);
 	// var_dump(function_exists('mysqli_connect'));
 	// if ($conn) {
@@ -18,6 +19,7 @@
     //for saving the data into the database 
     if(isset($_POST["save"])){
 
+        
         $id= $_POST["id"];
         $name= $_POST["name"];
         $email = $_POST["email"];
@@ -43,6 +45,7 @@
             $execute = mysqli_query($conn,$query) or die(mysqli_error($conn));
              header("location:databaseExample.php");
         }
+
 
         //for showing the data into the form to edit and update it
         if(isset($_GET["edit"])){
